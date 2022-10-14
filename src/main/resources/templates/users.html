@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN APP - users</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Users List</h1>
+		</div>
+		<div>
+			<table class="table table-striped table-bordered">
+				<thead class="thead-dark">
+					<tr>
+						<th>User ID</th>
+						<th>Email</th>
+						<th>FirstName</th>
+						<th>LastName</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user: ${listUsers}">
+					<td th:text="${user.id}">User ID</td>
+					<td th:text="${user.email}">Email</td>
+					<td th:text="${user.firstName}">FirstName</td>
+					<td th:text="${user.lastName}">LastName</td>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>
